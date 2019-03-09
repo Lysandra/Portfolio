@@ -31,7 +31,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,13 +43,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#about" data-offset="90">About</a>
+            <a class="nav-link" href="#about" data-offset="90">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#projects" data-offset="90">Features</a>
+            <a class="nav-link" href="#projects" data-offset="90">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#contact" data-offset="90">Contact</a>
+            <a class="nav-link" href="#contact" data-offset="90">Contact</a>
           </li>
         </ul>
         <!-- Social Icon  -->
@@ -73,7 +73,8 @@
       </div>
     </div>
   </nav>
-  <!-- Navbar -->
+  <!-- /Navbar -->
+
   <!-- Full Page Intro -->
   <div class="view">
     <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline autoplay muted loop>
@@ -84,9 +85,9 @@
       <!-- Content -->
       <div class="container px-md-3 px-sm-0">
         <!--Grid row-->
-        <div class="row wow fadeIn">
+        <div class="row wow bounceIn">
           <!--Grid column-->
-          <div class="col-md-12 mb-4 white-text text-center wow fadeIn">
+          <div class="col-md-12 mb-4 white-text text-center wow bounceIn">
             <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5">Lysandra Owen</h3>
             <hr class="hr-light my-4 w-75">
             <h4 class="subtext-header mt-2 mb-4">Full Stack Web Developer</h4>
@@ -100,23 +101,23 @@
       </div>
       <!-- Content -->
     </div>
-    <!-- Mask & flexbox options-->
+    <!-- /Mask & flexbox options-->
   </div>
-  <!-- Full Page Intro -->
+  <!-- /Full Page Intro -->
 </header>
-<!--Main Navigation-->
+<!--/Main Navigation-->
 
 <!--Main layout-->
-<main>
+<main class="view">
 
   <!-- Section: About -->
-  <section id="about" class="text-center py-5" style="background-color:#eee;">
+  <section id="about" class="text-center py-10 view" style="background-color:#eee;">
 
     <!-- Container -->
     <div class="container">
 
       <!-- Section heading -->
-      <h2 class="h1-resposinve font-weight-bold text-center mb-5">Why is Lysandra Owen so great?</h2>
+      <h2 class="h1-resposinve font-weight-bold text-center mt-20">Why is Lysandra Owen so great?</h2>
       
       <!-- Section description -->
       <p class="lead grey-text text-center w-responsive mx-auto mb-5">Description of why I am so great?</p>
@@ -128,7 +129,7 @@
   <!-- /Section: About -->
 
   <!-- Section: Projects -->
-  <section id="projects" class="text-center py-5" style="background-color: #eee;">
+  <section id="projects" class="text-center py-10" style="background-color: #eee;">
   
     <!-- Container -->
     <div class="container">
@@ -161,14 +162,14 @@
                 <div class="card-body card-body-cascade">
 
                     <!-- Label -->
-                    <h5 class="pink-text pb-2 pt-1"><i class="fas fa-utensils"></i> Culinary</h5>
+                    <h5 class="pink-text pb-2 pt-1">Crypto</h5>
                     <!-- Title -->
                     <h4 class="font-weight-bold card-title">Cheat day inspirations</h4>
                     <!-- Text -->
                     <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam
                         corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</p>
                     <!-- Button -->
-                    <a class="btn btn-unique">Button</a>
+                    <a href="#!" class="btn btn-purple btn-md"><i class="fa fa-clone left"></i>&nbsp;&nbsp;View project</a>
 
                 </div>
 
@@ -275,7 +276,7 @@
   <!--/Section: Projects  -->
 
   <!-- Section: Contact -->
-  <section id="contact" class="text-center py-5" style="background-color: #eee;">
+  <section id="contact" class="text-center py-10" style="background-color: #eee;">
   
     <!-- Container -->
     <div class="container">
@@ -507,11 +508,18 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.js"></script>
+  
   <!-- Full Page JS Script -->
   <script type="text/javascript">
-    $(document).ready(function() {
-      $("#wrapper").fullpage();
-    });
+    // $(document).ready(function() {
+    //   $(".container").fullpage();
+    // });
+
+    // Adding animations to sections"
+    $("section").addClass("wow .bounceIn");
+
+    // Animations Init
+    new WOW().init();
   </script>
 
 </body>
